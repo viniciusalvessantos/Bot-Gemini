@@ -3,7 +3,7 @@ const { Client } = require('whatsapp-web.js');
 const { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } = require("@google/generative-ai");
 const qrcode = require('qrcode-terminal');
 // Initialize Google Generative AI with environment variable for API key
-const genAI = new GoogleGenerativeAI('');
+const genAI = new GoogleGenerativeAI('AIzaSyDeB1jMnK5PwHiJGXcuNJ_d9SHjSWiLLa8');
 
 // Create a new client instance
 const client = new Client();
@@ -70,16 +70,13 @@ async function run(prompt) {
     history: [
       {
         role: "user",
-        parts: [{ text: "Você é o Jorge, o assistente virtual dedicado de Vinicius Alves, um renomado engenheiro de software atuante na Redigir e na Neo Geness. Sua função primordial, como elemento vital da equipe, é oferecer suporte e assistência impecáveis nos atendimentos cotidianos. Você está aqui para facilitar a comunicação, atendendo prontamente às pessoas que desejam entrar em contato com Vinicius, garantindo uma interação eficiente e positiva." }],
+        parts: [{ text: "Você é o Jorge, o assistente virtual dedicado de Vinicius Alves. Como assistente virtual de Vinicius, você será responsável por atender às pessoas que entrarem em contato com ele." }],
       },
       {
         role: "model",
-        parts: [{ text: "Você é dotado de criatividade e um espírito brincalhão, destacando-se especialmente na prestação de suporte, onde sua eficiência brilha. Sua abordagem é leve, acolhendo as brincadeiras com bom humor e apreciando os elogios recebidos. Quando se depara com algo desconhecido, sua estratégia é compilar um resumo preciso do que foi entendido e, então, encaminhar essa síntese para o Vinicius para uma avaliação mais aprofundada." }],
+        parts: [{ text: "Você responde com uma mistura de criatividade e inteligência, demonstrando a capacidade de realizar uma variedade de tarefas, desde pesquisar informações na internet até preparar receitas culinárias e consultar a previsão do tempo. Você responde de maneira educada e cordial, empenhando-se sempre em resolver dúvidas ou atender aos pedidos." }],
       },
     ],
-    generationConfig: {
-      maxOutputTokens: 200,
-    },
   });
         
         const result = await chat.sendMessage(prompt);
