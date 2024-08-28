@@ -3,7 +3,7 @@ const { Client } = require('whatsapp-web.js');
 const { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } = require("@google/generative-ai");
 const qrcode = require('qrcode-terminal');
 // Initialize Google Generative AI with environment variable for API key
-const genAI = new GoogleGenerativeAI('AIzaSyDeB1jMnK5PwHiJGXcuNJ_d9SHjSWiLLa8');
+const genAI = new GoogleGenerativeAI('');
 
 // Create a new client instance
 const client = new Client();
